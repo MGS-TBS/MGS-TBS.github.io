@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Charts",
+        "script": "plugins/chartPlugin.js",
+        "version": "1.0"
+    },
+    {
+        "name": "Timeline",
+        "script": "plugins/timelinePlugin.js",
+        "version": "1.0"
+    },
+    {
+        "name": "Syntax Highlight",
+        "script": "plugins/prismPlugin.js",
+        "version": "1.0"
+    }
+]

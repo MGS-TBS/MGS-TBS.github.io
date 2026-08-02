@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Mohammad Gholi Pour | Developer
+</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/animations.css">
+
+<link rel="stylesheet" href="css/audioPlayer.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+<script src="js/gsap.min.js"></script>
+
+<script src="js/typed.umd.js"></script>
+
+<script src="js/lenis.min.js"></script>
+
+<script src="js/three.min.js"></script>
+
+
+<style>
+
+
+*{
+
+box-sizing:border-box;
+
+}
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+margin:0;
+
+padding:0;
+
+font-family:'Poppins',sans-serif;
+
+background:#020617;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+
+
+/* =========================
+ THREE BACKGROUND
+========================= */
+
+
+#bgCanvas{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100vh;
+
+z-index:0;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(
+circle,
+#10204a,
+#020617
+);
+
+}
+
+
+
+#bgCanvas canvas{
+
+display:block;
+
+width:100%;
+
+height:100%;
+
+}
+
+
+
+/* =========================
+ NAV
+========================= */
+
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:80px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 8%;
+
+z-index:10;
+
+background:
+
+rgba(2,6,23,.35);
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+.logo{
+
+font-size:32px;
+
+font-weight:700;
+
+color:#38bdf8;
+
+letter-spacing:3px;
+
+}
+
+
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+color:#38bdf8;
+
+}
+
+
+
+
+
+/* =========================
+ CONTENT
+========================= */
+
+
+section{
+
+position:relative;
+
+z-index:2;
+
+min-height:100vh;
+
+padding:120px 8%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+
+
+
+
+.hero h1{
+
+font-size:clamp(
+40px,
+7vw,
+90px
+);
+
+margin:0;
+
+}
+
+
+
+.hero h2{
+
+font-size:35px;
+
+color:#38bdf8;
+
+}
+
+
+
+.hero p{
+
+font-size:20px;
+
+opacity:.8;
+
+}
+
+
+
+
+.heroButtons{
+
+margin-top:30px;
+
+display:flex;
+
+gap:20px;
+
+}
+
+
+
+
+.heroButtons button{
+
+
+padding:15px 30px;
+
+
+border-radius:30px;
+
+
+border:1px solid #38bdf8;
+
+
+background:
+
+rgba(56,189,248,.1);
+
+
+
+color:white;
+
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+.heroButtons button:hover{
+
+background:#38bdf8;
+
+color:#020617;
+
+}
+
+
+
+
+
+
+
+.cards{
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(
+auto-fit,
+minmax(250px,1fr)
+);
+
+
+gap:30px;
+
+
+}
+
+
+
+
+.card{
+
+
+padding:30px;
+
+
+border-radius:20px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+
+border:
+
+1px solid rgba(255,255,255,.15);
+
+
+
+backdrop-filter:
+
+blur(20px);
+
+
+
+transition:.4s;
+
+
+}
+
+
+
+
+.card:hover{
+
+
+transform:
+
+translateY(-10px);
+
+
+
+border-color:#38bdf8;
+
+
+}
+
+
+
+
+.card h3{
+
+color:#38bdf8;
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+nav ul{
+
+display:none;
+
+}
+
+
+.heroButtons{
+
+flex-direction:column;
+
+}
+
+
+
+section{
+
+padding:100px 25px;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:4rem;
+
+    padding:0 5%;
+    min-height:100vh;
+}
+
+.heroLeft,
+.heroRight{
+    flex:1;
+}
+
+.heroRight{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.videoGlass{
+    width: 100%;
+    max-width: 650px;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoGlass video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+<div id="progress"></div>
+
+
+
+<div id="bgCanvas"></div>
+
+
+
+
+
+
+<nav>
+
+
+<div class="logo">
+
+MGS
+
+</div>
+
+
+
+
+<ul>
+
+
+<li>
+<a href="#home">
+Home
+</a>
+</li>
+
+
+<li>
+<a href="#software">
+Software
+</a>
+</li>
+
+
+<li>
+<a href="#engineering">
+Engineering
+</a>
+</li>
+
+
+<li>
+<a href="#cases">
+Cases
+</a>
+</li>
+
+
+<li>
+<a href="#blog">
+Blog
+</a>
+</li>
+
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
+
+
+
+
+<section id="home">
+
+<div class="hero">
+
+    <div class="heroLeft">
+
+        <h1>
+            <span id="NameOwner" class="NameV">Mohammad</span><br>
+            <span>Gholi Pour</span>
+        </h1>
+
+        <h2>
+            <span id="typing"></span>
+        </h2>
+
+        <p>
+            Developer
+            <br>
+            Researcher
+        </p>
+
+        <div class="heroButtons">
+
+            <button>Download Software</button>
+
+            <button>My Projects</button>
+
+        </div>
+
+    </div>
+
+    <div class="heroRight">
+
+        <div class="videoGlass">
+
+            <video
+                id="heroVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls>
+            </video>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+<section id="software">
+
+
+<h2>
+
+Software
+
+</h2>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+
+Rebar Optimizer
+
+</h3>
+
+
+<p>
+
+AI Based Optimization
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+ETABS Tools
+
+</h3>
+
+
+<p>
+
+Engineering Utilities
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+Legal Assistant
+
+</h3>
+
+
+<p>
+
+Case Management
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="engineering">
+
+<h2>
+
+Engineering
+
+</h2>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="cases">
+
+<h2>
+
+Evidence Timeline
+
+</h2>
+
+
+<div id="timeline"></div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="blog">
+
+<h2>
+
+Latest Articles
+
+</h2>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="contact">
+
+<h2>
+
+Contact
+
+</h2>
+
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+ AUDIO PLAYER
+========================= -->
+
+
+<div id="audioPlayer">
+
+
+<div class="audioCircle">
+
+
+<div class="pulseRing"></div>
+
+
+<button id="audioPlay">
+
+▶
+
+</button>
+
+
+</div>
+
+
+
+<div class="audioInfo">
+
+
+<h3 id="audioTitle">
+
+MGS Audio
+
+</h3>
+
+
+<p id="audioText">
+
+Ready...
+
+</p>
+
+
+</div>
+
+
+
+<div class="audioWave" >
+
+<span class="audioWaveL"></span>
+
+<span class="audioWaveL"></span>
+
+<span class="audioWaveL"></span>
+
+<span class="audioWaveL"></span>
+
+<span class="audioWaveL"></span>
+
+</div>
+
+
+
+</div>
+
+
+
+<audio id="audio"></audio>
+
+
+
+
+
+
+
+<script src="js/app.js"></script>
+
+<script src="js/cursor.js"></script>
+
+<script src="js/typing.js"></script>
+
+<script src="js/scroll.js"></script>
+
+
+<!-- Galaxy -->
+
+<script src="js/threeBackground.js"></script>
+
+
+
+<!-- Audio -->
+
+<script src="js/audioPlayer.js"></script>
+
+
+
+<script src="js/router.js"></script>
+
+
+
+</body>
+
+</html>

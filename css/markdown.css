@@ -1,0 +1,61 @@
+#markdown{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:60px;
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+#markdown h1{
+
+font-size:48px;
+
+margin:40px 0;
+
+}
+
+#markdown h2{
+
+font-size:36px;
+
+margin:35px 0;
+
+color:#2D9CFF;
+
+}
+
+#markdown h3{
+
+margin:25px 0;
+
+color:#F7B733;
+
+}
+
+#markdown code{
+
+background:#111827;
+
+padding:3px 8px;
+
+border-radius:6px;
+
+}
+
+#markdown pre{
+
+background:#081320;
+
+padding:30px;
+
+border-radius:15px;
+
+overflow:auto;
+
+}

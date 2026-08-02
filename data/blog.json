@@ -1,0 +1,29 @@
+[
+{
+"id":1,
+"title":"ETABS Design Tips",
+"category":"Engineering",
+"date":"2026-07-08",
+"image":"assets/blog/etabs.jpg",
+"summary":"Professional ETABS Design Techniques",
+"file":"posts/etabs.html"
+},
+{
+"id":2,
+"title":"AI Rebar Optimization",
+"category":"AI",
+"date":"2026-07-06",
+"image":"assets/blog/ai.jpg",
+"summary":"Genetic Algorithm for Rebar Cutting",
+"file":"posts/ai.html"
+},
+{
+"id":3,
+"title":"Concrete Design",
+"category":"Engineering",
+"date":"2026-07-01",
+"image":"assets/blog/concrete.jpg",
+"summary":"ACI Concrete Design Notes",
+"file":"posts/concrete.html"
+}
+]

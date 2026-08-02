@@ -1,0 +1,29 @@
+[
+{
+"id":1,
+"name":"Rebar Optimizer",
+"version":"1.0",
+"category":"Engineering",
+"description":"AI Based Rebar Optimization",
+"image":"assets/software/rebar.png",
+"download":"downloads/rebar.zip"
+},
+{
+"id":2,
+"name":"ETABS Toolkit",
+"version":"2.3",
+"category":"Engineering",
+"description":"Professional ETABS Utilities",
+"image":"assets/software/etabs.png",
+"download":"downloads/etabs.zip"
+},
+{
+"id":3,
+"name":"Beam Calculator",
+"version":"4.0",
+"category":"Concrete",
+"description":"Beam Design Software",
+"image":"assets/software/beam.png",
+"download":"downloads/beam.zip"
+}
+]

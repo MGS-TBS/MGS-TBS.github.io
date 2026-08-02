@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ارتباط با ما</title>
+  <!-- آیکون‌های FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      /* پس‌زمینه رنگی و جذاب برای دیدن بهتر اثر شیشه‌ای */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* کارت اصلی شیشه‌ای (Glassmorphism) */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      width: 100%;
+      max-width: 480px;
+      padding: 35px 25px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .glass-card h2 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* استایل هر ردیف ارتباطی */
+    .contact-item {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 16px;
+      border-radius: 16px;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* استایل آیکون‌ها */
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: #fff;
+      flex-shrink: 0;
+      margin-left: 15px; /* فاصله آیکون تا متن در حالت راست‌چین */
+    }
+
+    /* دایره‌ای شکل برای تلگرام و واتس‌اپ */
+    .shape-circle {
+      border-radius: 50%;
+    }
+
+    /* مربعی شکل (با گوشه‌های نرم) برای بقیه */
+    .shape-square {
+      border-radius: 12px;
+    }
+
+    /* رنگ پس‌زمینه آیکون‌ها */
+    .telegram-bg  { background: linear-gradient(135deg, #229ED9, #0088cc); }
+    .whatsapp-bg  { background: linear-gradient(135deg, #25D366, #128C7E); }
+    .instagram-bg { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .phone-bg     { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .email-bg     { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+
+    /* متن‌ها */
+    .details {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .details .title {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .details .value {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 500;
+      direction: ltr; /* برای نمایش درست آیدی‌ها و شماره‌ها */
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glass-card">
+    <h2>پل‌های ارتباطی</h2>
+    
+    <div class="contact-list">
+      
+      <!-- تلگرام (دایره) -->
+      <a href="https://t.me/your_telegram_id" target="_blank" class="contact-item">
+        <div class="icon-box shape-circle telegram-bg">
+          <i class="fa-brands fa-telegram"></i>
+        </div>
+        <div class="details">
+          <span class="title">تلگرام</span>
+          <span class="value">@your_telegram_id</span>
+        </div>
+      </a>
+
+      <!-- واتس‌اپ (دایره) -->
+      <a href="https://wa.me/989123456789" target="_blank" class="contact-item">
+        <div class="icon-box shape-circle whatsapp-bg">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="details">
+          <span class="title">واتس‌اپ</span>
+          <span class="value">+98 912 345 6789</span>
+        </div>
+      </a>
+
+      <!-- اینستاگرام (مربع) -->
+      <a href="https://instagram.com/your_instagram_id" target="_blank" class="contact-item">
+        <div class="icon-box shape-square instagram-bg">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="details">
+          <span class="title">اینستاگرام</span>
+          <span class="value">@your_instagram_id</span>
+        </div>
+      </a>
+
+      <!-- تماس تلفنی (مربع) -->
+      <a href="tel:+989123456789" class="contact-item">
+        <div class="icon-box shape-square phone-bg">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="details">
+          <span class="title">شماره تماس</span>
+          <span class="value">0912 345 6789</span>
+        </div>
+      </a>
+
+      <!-- ارسال ایمیل (مربع) -->
+      <a href="mailto:example@gmail.com" class="contact-item">
+        <div class="icon-box shape-square email-bg">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="details">
+          <span class="title">پست الکترونیک</span>
+          <span class="value">example@gmail.com</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>

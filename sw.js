@@ -1,4 +1,4 @@
-const CACHE="MG-1";
+const CACHE="MG-0";
 
 const FILES=[
 

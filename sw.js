@@ -7,10 +7,12 @@ const FILES=[
 "/index.html",
 
 "/css/style.css",
+"/css/audioPlayer.css",
 
 "/css/animations.css",
 
 "/js/app.js",
+"/js/audioPlayer.js",
 
 "/js/router.js"
 
@@ -21,17 +23,15 @@ self.addEventListener(
 
 "install",
 
-e=>{
+event=>{
 
-e.waitUntil(
+event.waitUntil(
 
 caches.open(CACHE)
 
-.then(cache=>{
+.then(cache=>
 
-cache.addAll(FILES);
-
-})
+cache.addAll(FILES))
 
 );
 
@@ -41,17 +41,17 @@ self.addEventListener(
 
 "fetch",
 
-e=>{
+event=>{
 
-e.respondWith(
+event.respondWith(
 
-caches.match(e.request)
+caches.match(event.request)
 
-.then(r=>{
+.then(r=>
 
-return r || fetch(e.request);
+r || fetch(event.request)
 
-})
+)
 
 );
 

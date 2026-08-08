@@ -12,7 +12,8 @@ const FILES=[
 
 "/js/app.js",
 
-"/js/router.js"
+"/js/router.js",
+"audioPlayer.js"
 
 ];
 

@@ -13,7 +13,9 @@ const FILES=[
 "/js/app.js",
 
 "/js/router.js",
-"audioPlayer.js"
+"/js/audioPlayer.js",
+"/audio/Iron Heart 2026 Noor UpMusics.mp3"
+
 
 ];
 

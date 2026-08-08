@@ -6,15 +6,18 @@ const FILES=[
 
 "/index.html",
 
+"C/audio/Iron Heart 2026 Noor UpMusics.mp3",
 "/css/style.css",
 "/css/audioPlayer.css",
-
 "/css/animations.css",
+"/css/heroShowcase.css",
 
 "/js/app.js",
 "/js/audioPlayer.js",
-
+"/js/heroShowcase.js",
+"/js/threeBackground.js",
 "/js/router.js"
+
 
 
 ];

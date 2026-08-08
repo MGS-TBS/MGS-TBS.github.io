@@ -12,7 +12,7 @@
 Mohammad Gholi Pour | Developer
 </title>
 
-<link rel="mainfest" href="/manifest.json">
+<link rel="mainfest" href="./manifest.webmanifest">
 <meta name="theme-color" content="#1976d2">
 <link rel="stylesheet" href="css/style.css">
 
@@ -828,7 +828,15 @@ Ready...
 
 <script src="js/router.js"></script>
 
-
+<script>
+    if("serviceWorker" in navigator){
+        window.addEventListener("load",()=>{
+            navigator.serviceWorker.register("./sw.js")
+            .then(reg => console.log("SW regestred", reg.scope))
+            .catch(err=> console.error("SW error :", err));
+        })
+    }
+</script>
 
 </body>
 

@@ -1,4 +1,4 @@
-const CACHE="MG-0";
+const CACHE="MG-1";
 
 const FILES=[
 
@@ -12,9 +12,7 @@ const FILES=[
 
 "/js/app.js",
 
-"/js/router.js",
-"/js/audioPlayer.js",
-"/audio/Iron Heart 2026 Noor UpMusics.mp3"
+"/js/router.js"
 
 
 ];

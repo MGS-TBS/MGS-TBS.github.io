@@ -437,7 +437,9 @@ images.forEach(i => observer.observe(i));
 }
 
 };
-
+if("serviceWorker" in navigator){
+    navigator.serviceWorker.register("/sw.js");
+}
 document.addEventListener(
 
 "DOMContentLoaded",

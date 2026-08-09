@@ -7,8 +7,6 @@ const FILES=[
 "/index.html",
 "/Contact.html",
 
-"/data/playlist.json",
-"/audio/Iron Heart 2026 Noor UpMusics.mp3",
 
 "/css/style.css",
 "/css/audioPlayer.css",
@@ -18,6 +16,7 @@ const FILES=[
 "/js/app.js",
 "/js/audioPlayer.js",
 "/js/heroShowcase.js",
+"js/three.min.js"
 "/js/threeBackground.js",
 "/js/router.js"
 

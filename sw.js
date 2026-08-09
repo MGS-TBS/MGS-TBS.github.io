@@ -7,6 +7,9 @@ const FILES=[
 "/index.html",
 "/Contact.html",
 
+"/data/playlist.json",
+"audio/Iron Heart 2026 Noor UpMusics.mp3",
+
 "/css/style.css",
 "/css/audioPlayer.css",
 "/css/animations.css",

@@ -7,9 +7,6 @@ const FILES=[
 "/index.html",
 "/Contact.html",
 
-"/data/playlist.json",
-
-
 "/css/style.css",
 "/css/audioPlayer.css",
 "/css/animations.css",
